@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2026-03-10T08:52:02.939159" rpa="false" schemaversion="5">
+<suite id="s1" name="Cadastro-De-Produtos" source="C:\testes\robotframework-projeto02\tests\cadastro-de-produtos.robot">
+<test id="s1-t1" name="Scenario: Cadastro de produto realizado com sucesso" line="11">
+<kw name="Given Eu estou na página de login do usuário">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-10T08:52:03.220874" level="INFO">Opening browser 'chrome' to base url 'https://cotiaws.github.io/projet-estoque/index.html'.</msg>
+<arg>${URL_BASE}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-10T08:52:03.220696" elapsed="1.547625"/>
+</kw>
+<status status="PASS" start="2026-03-10T08:52:03.220100" elapsed="1.548560"/>
+</kw>
+<kw name="And Eu preencho meu nome de usuário">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-10T08:52:04.771090" level="INFO">Typing text 'admin' into text field 'xpath=//*[@id="usuario"]'.</msg>
+<arg>${INPUT_NOMEUSUARIO}</arg>
+<arg>admin</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-10T08:52:04.770566" elapsed="0.101846"/>
+</kw>
+<status status="PASS" start="2026-03-10T08:52:04.770039" elapsed="0.102506"/>
+</kw>
+<kw name="And Eu preencho minha senha de usuário">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-10T08:52:04.873413" level="INFO">Typing text '123' into text field 'xpath=//*[@id="senha"]'.</msg>
+<arg>${INPUT_SENHAUSUARIO}</arg>
+<arg>123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-10T08:52:04.873241" elapsed="0.050450"/>
+</kw>
+<status status="PASS" start="2026-03-10T08:52:04.872897" elapsed="0.050895"/>
+</kw>
+<kw name="And Eu solicito acesso ao sistema e sou redirecionado para o dashboard">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-03-10T08:52:04.924704" level="INFO">Clicking button 'xpath=//*[@id="loginForm"]/button'.</msg>
+<arg>${BUTTON_LOGIN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-10T08:52:04.924479" elapsed="0.111627"/>
+</kw>
+<status status="PASS" start="2026-03-10T08:52:04.924160" elapsed="0.112192"/>
+</kw>
+<kw name="And Eu clico no menu de cadastro de produto">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2026-03-10T08:52:05.037864" level="INFO">Clicking link 'xpath=/html/body/nav/div/div/a[2]'.</msg>
+<arg>${MENU_CADASTRO}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-10T08:52:05.037585" elapsed="0.131076"/>
+</kw>
+<status status="PASS" start="2026-03-10T08:52:05.037204" elapsed="0.131668"/>
+</kw>
+<kw name="And Eu preencho o nome do produto">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-10T08:52:05.170000" level="INFO">Typing text 'Produto Teste' into text field 'xpath=//*[@id="nome"]'.</msg>
+<arg>${INPUT_NOMEPRODUTO}</arg>
+<arg>Produto Teste</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-10T08:52:05.169724" elapsed="0.078748"/>
+</kw>
+<status status="PASS" start="2026-03-10T08:52:05.169387" elapsed="0.079185"/>
+</kw>
+<kw name="And Eu preencho a quantidade do produto">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-10T08:52:05.249271" level="INFO">Typing text '10' into text field 'xpath=//*[@id="quantidade"]'.</msg>
+<arg>${INPUT_QUANTIDADE}</arg>
+<arg>10</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-10T08:52:05.249109" elapsed="0.071012"/>
+</kw>
+<status status="PASS" start="2026-03-10T08:52:05.248889" elapsed="0.071341"/>
+</kw>
+<kw name="When Eu confirmo a realização do cadastro do produto">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-03-10T08:52:05.320917" level="INFO">Clicking button 'xpath=//*[@id="produtoForm"]/button'.</msg>
+<arg>${BUTTON_CADASTRO}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-10T08:52:05.320771" elapsed="0.050731"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-10T08:52:10.372222" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-10T08:52:05.371656" elapsed="5.000757"/>
+</kw>
+<status status="PASS" start="2026-03-10T08:52:05.320554" elapsed="5.052038"/>
+</kw>
+<kw name="Then Eu sou informado que o produto foi cadastrado com sucesso">
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2026-03-10T08:52:10.404295" level="INFO">Element 'xpath=//*[@id="mensagem"]' contains text 'Produto cadastrado com sucesso!'.</msg>
+<arg>${MESSAGE_CADASTRO}</arg>
+<arg>Produto cadastrado com sucesso!</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2026-03-10T08:52:10.373764" elapsed="0.030606"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-03-10T08:52:10.497767" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/cadastro-de-produto-realizado-com-sucesso.png"&gt;&lt;img src="screenshots/cadastro-de-produto-realizado-com-sucesso.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/cadastro-de-produto-realizado-com-sucesso.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-03-10T08:52:10.404494" elapsed="0.093377"/>
+</kw>
+<status status="PASS" start="2026-03-10T08:52:10.373302" elapsed="0.124656"/>
+</kw>
+<status status="PASS" start="2026-03-10T08:52:03.219300" elapsed="7.279326"/>
+</test>
+<status status="PASS" start="2026-03-10T08:52:02.940649" elapsed="7.559569"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Cadastro-De-Produtos" id="s1" pass="1" fail="0" skip="0">Cadastro-De-Produtos</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
